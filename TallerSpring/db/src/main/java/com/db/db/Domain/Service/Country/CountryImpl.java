@@ -6,11 +6,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.db.db.Domain.Entities.Country;
 import com.db.db.Domain.Repository.CountryRepository;
 
+@Service
 public class CountryImpl implements CountryInterface {
 
     @Autowired 

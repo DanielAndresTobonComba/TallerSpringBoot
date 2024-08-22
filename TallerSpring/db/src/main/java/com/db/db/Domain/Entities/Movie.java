@@ -22,6 +22,8 @@ import jakarta.persistence.Transient;
 @Table(name = "pelicula")
 public class Movie {
 
+
+
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pelicula" , columnDefinition = "SMALLINT UNSIGNED" )
@@ -37,12 +39,12 @@ public class Movie {
     private String releaseYear; 
 
     @ManyToOne
-    @JoinColumn(name = "id_idioma" , columnDefinition = "SMALLINT UNSIGNED") 
+    @JoinColumn(name = "id_idioma" , columnDefinition = "TINYINT UNSIGNED") 
     private Language language; 
 
 
     @ManyToOne 
-    @JoinColumn(name = "id_idioma_original" , columnDefinition = "SMALLINT UNSIGNED") 
+    @JoinColumn(name = "id_idioma_original" , columnDefinition = "TINYINT UNSIGNED") 
     private Language originalLanguage; 
 
 
@@ -69,14 +71,115 @@ public class Movie {
     @Column(name = "special_details" , columnDefinition = "set('Deleted Scenes' , 'Trailers' , 'Commentaries' , 'Behind the Scenes')")
     private Set<String> details;
 
-
-    
-
-    
-
-
     @Column(name = "ultima_actualizacion" , columnDefinition = "TIMESTAMP")
     private LocalDateTime lastUpdate;
+
+    public Movie() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(String releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public Language getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(Language language) {
+        this.language = language;
+    }
+
+    public Language getOriginalLanguage() {
+        return originalLanguage;
+    }
+
+    public void setOriginalLanguage(Language originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
+
+    public int getRentDuration() {
+        return rentDuration;
+    }
+
+    public void setRentDuration(int rentDuration) {
+        this.rentDuration = rentDuration;
+    }
+
+    public double getRental_rate() {
+        return rental_rate;
+    }
+
+    public void setRental_rate(double rental_rate) {
+        this.rental_rate = rental_rate;
+    }
+
+    public double getMovieDuration() {
+        return movieDuration;
+    }
+
+    public void setMovieDuration(double movieDuration) {
+        this.movieDuration = movieDuration;
+    }
+
+    public double getReplacement_cost() {
+        return replacement_cost;
+    }
+
+    public void setReplacement_cost(double replacement_cost) {
+        this.replacement_cost = replacement_cost;
+    }
+
+    public Classification getClasification() {
+        return clasification;
+    }
+
+    public void setClasification(Classification clasification) {
+        this.clasification = clasification;
+    }
+
+    public Set<String> getDetails() {
+        return details;
+    }
+
+    public void setDetails(Set<String> details) {
+        this.details = details;
+    }
+
+    public LocalDateTime getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(LocalDateTime lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
 
 
 
