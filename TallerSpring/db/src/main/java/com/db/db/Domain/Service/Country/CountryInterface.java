@@ -12,7 +12,7 @@ public interface CountryInterface {
 
     Optional<Country> findById(Integer id);
 
-    Country createOne(Country country);
+    Country save(Country country);
     
     Country updateOneById(Integer id , Country country); 
 

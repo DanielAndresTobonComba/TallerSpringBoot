@@ -30,7 +30,7 @@ public class CountryImpl implements CountryInterface {
     }
 
     @Override
-    public Country createOne(Country country) {
+    public Country save(Country country) {
         
         return countryRepository.save(country);
     }

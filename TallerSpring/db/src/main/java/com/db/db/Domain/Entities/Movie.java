@@ -63,7 +63,7 @@ public class Movie {
 
  
     // crear un enum tambien tengo una clase Classification
-   @Column(name = "clasificacion" , columnDefinition = "ENUM('G' , 'PG' , 'PG_13' , 'R' , 'NC_17'  )" )
+   @Column(name = "clasificacion" , columnDefinition = "ENUM('PG' , 'PG_13' , 'R' , 'NC_17'  )" )
    @Enumerated(EnumType.STRING)
     private Classification clasification; 
 

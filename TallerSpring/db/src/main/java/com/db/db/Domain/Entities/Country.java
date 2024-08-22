@@ -2,12 +2,15 @@ package com.db.db.Domain.Entities;
 
 import java.time.LocalDateTime;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+/* import jakarta.validation.constraints.NotNull; */
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "pais")
@@ -18,7 +21,7 @@ public class Country {
     @Column(name = "id_pais" , columnDefinition = "SMALLINT UNSIGNED" )
     private int id; 
 
-
+    @NotNull(message = "x")
     @Column(name = "nombre" , columnDefinition = "VARCHAR(50)")
     private String name; 
 
